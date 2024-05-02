@@ -1,23 +1,33 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | pdm</title>
-    <link rel="shortcut icon" href="TemplateData/favicon.ico">
-    <link rel="stylesheet" href="TemplateData/style.css">
-    <script src="TemplateData/UnityProgress.js"></script>
-    <script src="Build/UnityLoader.js"></script>
-    <script>
-      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/WebBuild.json", {onProgress: UnityProgress});
-    </script>
-  </head>
-  <body style="background-color:#f4e8cc;">
-    <div class="webgl-content">
-      <div id="unityContainer" style="width: 960px; height: 540px"></div>
-      <div class="footer">
-        <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
-      </div>
-    </div>
-  </body>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Halloween Slot Machine</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+<meta name="generator" content="Construct 3">
+	<meta name="author" content="PAS GAMES">
+	<meta name="description" content="Halloween Slot Machine">
+	<link rel="manifest" href="appmanifest.json">
+	<link rel="apple-touch-icon" sizes="128x128" href="icons/icon-128.png">
+	<link rel="apple-touch-icon" sizes="256x256" href="icons/icon-256.png">
+	<link rel="icon" type="image/png" href="icons/icon-256.png">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<div id="fb-root"></div>
+
+	<noscript>
+		<div id="notSupportedWrap">
+			<h2 id="notSupportedTitle">This content requires JavaScript</h2>
+			<p class="notSupportedMessage">JavaScript appears to be disabled. Please enable it to view this content.</p>
+		</div>
+	</noscript>
+	<script src="scripts/supportcheck.js"></script>
+	<script src="scripts/offlineclient.js" type="module"></script>
+	<script src="scripts/main.js" type="module"></script>
+	<script src="scripts/register-sw.js" type="module"></script>
+</body>
 </html>

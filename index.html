@@ -1,31 +1,35 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<title>Mafia Slot Machine</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
-
-<meta name="generator" content="Construct 3">
-	<meta name="author" content="PAS GAMES">
-	<meta name="description" content="Mafia Slot Machine">
-	<link rel="manifest" href="appmanifest.json">
-	<link rel="icon" type="image/png" href="icons/loading-logo.png">
-
-<link rel="stylesheet" href="style.css">
-
-</head>
-<body>
-<div id="fb-root"></div>
-
-	<noscript>
-		<div id="notSupportedWrap">
-			<h2 id="notSupportedTitle">This content requires JavaScript</h2>
-			<p class="notSupportedMessage">JavaScript appears to be disabled. Please enable it to view this content.</p>
-		</div>
-	</noscript>
-	<script src="scripts/supportcheck.js"></script>
-	<script src="scripts/offlineclient.js" type="module"></script>
-	<script src="scripts/main.js" type="module"></script>
-	<script src="scripts/register-sw.js" type="module"></script>
-</body>
+	<head>
+        <style type = "text/css">
+            body{
+                background-image: url("png/Background_1.png"); /* The image used */
+                background-color: #cccccc; /* Used if the image is unavailable */  /* background: #a3a3a3; */
+                background-position: center; /* Center the image */
+                background-repeat: no-repeat; /* Do not repeat the image */
+                background-size: cover; /* Resize the background image to cover the entire container */
+                padding: 0px;
+                margin: 0px;
+            }
+            canvas{
+                display:block;
+                margin: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        </style>
+        <script src = "js/phaser.js"></script>      
+    </head>
+	<body>
+         <!-- <img src="png/gui/LoadTitle.png" style="width:369px; height:272px;"> --> 
+            <!-- remove or comment unused configs before publish --> 
+        <script src = "js/slotConfig3x5.js"></script>                
+        <script src = "js/mkutils.js"></script>
+        <script src = "js/popups.js"></script>
+        <script src = "js/state_machine.js"></script>
+        <script src = "js/slot_classes.js"></script>
+	    <script src = "js/slotGame.js"></script>
+	</body>
 </html>

@@ -1,34 +1,18 @@
-<!DOCTYPE html>
-<html>
-	<head>
-        <style type = "text/css">
-            body{
-                background-image: url("png/Background_1.png"); /* The image used */
-                background-color: #cccccc; /* Used if the image is unavailable */  /* background: #a3a3a3; */
-                background-position: center; /* Center the image */
-                background-repeat: no-repeat; /* Do not repeat the image */
-                background-size: cover; /* Resize the background image to cover the entire container */
-                padding: 0px;
-                margin: 0px;
-            }
-            canvas{
-                display:block;
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Rock Climber Reels</title>
+        <style>
+            body {
                 margin: 0;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
+                padding: 0;
             }
         </style>
-        <script src = "js/phaser.js"></script>      
     </head>
-	<body>
-            <!-- remove or comment unused configs before publish --> 
-        <script src = "js/slotConfig3x5.js"></script>                
-        <script src = "js/mkutils.js"></script>
-        <script src = "js/popups.js"></script>
-        <script src = "js/state_machine.js"></script>
-        <script src = "js/slot_classes.js"></script>
-	    <script src = "js/slotGame.js"></script>
-	</body>
+    <body>
+        <script src="dist/bundle.js"></script>
+    </body>
 </html>

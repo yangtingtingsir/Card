@@ -572,6 +572,8 @@ var slotConfig_3x5 = {
     lineButtonsRightOrder: [14, 20, 12, 18, 16, 11, 17, 13, 15, 19],
     createControls: function(scene, slotControls) {
         let depth = 11;
+        slotControlsTmp = slotControls;
+
         slotControls.spinTextString = 'SPIN';
         slotControls.helpTextString = 'HELP';
 
@@ -609,6 +611,7 @@ var slotConfig_3x5 = {
         slotControls.menuButton = addButton('button_menu', 'button_menu_hover', true, -815, 470, 0.5, 0.5, depth);
         slotControls.menuButton.addClickEvent(() => {
             console.log('menu click');
+            
             var pu = scene.guiController.showPopUp(this.createInfoPUHandler);
             scene.soundController.playClip('button_click')
         }, this);
@@ -636,6 +639,15 @@ var slotConfig_3x5 = {
         slotControls.totalBetMinusButton = addButton('button_minus', 'button_minus_hover', false, -340 - 78, 468, 0.5, 0.5, depth);
         slotControls.totalBetMinusButton.addClickEvent(slotControls.lineBetMinus_Click, slotControls);
         slotControls.totalBetPlusButton = addButton('button_plus', 'button_plus_hover', false, -340 + 80, 468, 0.5, 0.5, depth);
+        
+        slotControls.addCoins = addButton('button_plus', 'button_plus_hover', false, +360 + 80, 468, 0.5, 0.5, depth);
+        slotControls.addCoins.addClickEvent(() => {
+            //修改
+            scene.slotPlayer.coins = scene.slotPlayer.coins + 1000;
+            slotControlsTmp.creditSumText.text = scene.slotPlayer.coins;
+
+        }, this);
+        
         slotControls.totalBetPlusButton.addClickEvent(slotControls.lineBetPlus_Click, slotControls);
         slotControls.linesText = scene.add.bitmapText(scene.centerX - 580, scene.centerY + 405, 'gameFont_2', 'Lines', 56, 1).setOrigin(0.5).setDepth(depth);
         slotControls.linesCountText = scene.add.bitmapText(scene.centerX - 580, scene.centerY + 467, 'gameFont_1', slotControls.selectedLinesCount, 72, 1).setOrigin(0.5).setDepth(depth);

@@ -210,6 +210,9 @@ var slotConfig_3x5 = {
         fileName: null,
         name: 'symbol_plate'
     }, {
+        fileName: 'gamelogo.png',
+        name: 'gamelogo'
+    },{
         fileName: null,
         name: 'specsymbol_plate'
     }, {
@@ -590,6 +593,8 @@ var slotConfig_3x5 = {
             _button.setDepth(_depth);
             return _button
         }
+        slotControls.linesPanel = addSprite('gamelogo', -800, -150, depth);
+
         slotControls.linesPanel = addSprite('panel_lines', -580, 470, depth);
         slotControls.totalbetPanel = addSprite('panel_totalbet', -340, 470, depth);
         slotControls.balancePanel = addSprite('panel_balance', 340, 470, depth);
